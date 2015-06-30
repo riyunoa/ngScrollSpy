@@ -24,7 +24,7 @@ mod.directive('affix', function(ScrollSpy) {
         wasAffixed= isAffixed;
         affixFn(function(rect) {
           if(isAffixed) {
-            isAffixed= (affixedPos <= pos + affixOptions.offset);
+            isAffixed= (affixedPos < pos + affixOptions.offset);
             return isAffixed;
           } else if(rect.top <= affixOptions.offset) {
             if(rect.top < affixOptions.offset) affixedPos= pos + rect.top;
